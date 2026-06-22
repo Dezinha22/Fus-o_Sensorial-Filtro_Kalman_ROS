@@ -9,6 +9,18 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
     
 2 - Instale o **Docker 29.5.3**
 
-3 - Possua acesso aos navegadores Google Chrome, Mozilla Firefox, Microsoft Edge, Safari ou similares
+3 - Possua acesso aos navegadores **Google Chrome**, **Mozilla Firefox** ou similares.
+
+### Pré-Requisitos de Arquivos
+
+4 - Faça a transferência dos dados de simulação contidos no [(link do google drive)](https://drive.google.com/drive/folders/1lF4HExtL49w9botrIfjxp7nfLHgtEdTF?usp=drive_link).
+
+5 - Faça a transferência do pacote ROS contido neste repositório.
+
+### Primeiros Passos 
+
+6 - Localize os arquivos transferidos e reserve os seus respectivos endereços. Para localizá-los, pode utilizar o comando *find*, *locale*, *ls*, *pwd*, dentre outros. Consulte o ([link](https://www.hostinger.com/br/tutoriais/comandos-linux)), ([link](https://info-ee.surrey.ac.uk/Teaching/Unix/index.html)) ou similares para ter conhecimento de outros comandos e sua estrutura.
+
+7 - Clone o repositório do lar_gazebo: _https://github.com/lar-deeufba/lar_gazebo?tab=readme-ov-file_
     
      
