@@ -5,9 +5,9 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
 
 ### Pré-Requisitos de Sistemas
 
-1 - Utilize a distribuição **Ubuntu 24.04 LTS**
+1 - Utilize a distribuição **Ubuntu 24.04 LTS**;
     
-2 - Instale o **Docker 29.5.3**
+2 - Instale o **Docker 29.5.3**;
 
 3 - Possua acesso aos navegadores **Google Chrome**, **Mozilla Firefox** ou similares.
 
@@ -19,8 +19,12 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
 
 ### Primeiros Passos 
 
-6 - Localize os arquivos transferidos e reserve os seus respectivos endereços. Para localizá-los, pode utilizar o comando *find*, *locale*, *ls*, *pwd*, dentre outros. Consulte o ([link](https://www.hostinger.com/br/tutoriais/comandos-linux)), ([link](https://info-ee.surrey.ac.uk/Teaching/Unix/index.html)) ou similares para ter conhecimento de outros comandos e sua estrutura.
+6 - Acesse o terminal (recomenda-se utilizar o _terminator_);
 
-7 - Clone o repositório do lar_gazebo: _https://github.com/lar-deeufba/lar_gazebo?tab=readme-ov-file_
+7 - Localize os arquivos transferidos e reserve os seus respectivos endereços. Para localizá-los, pode utilizar o comando *find*, *locale*, *ls*, *pwd*, dentre outros. Consulte o ([link](https://www.hostinger.com/br/tutoriais/comandos-linux)), ([link](https://info-ee.surrey.ac.uk/Teaching/Unix/index.html)) ou similares para ter conhecimento de outros comandos e sua estrutura;
+
+8 - Clone o repositório do lar_gazebo: _https://github.com/lar-deeufba/lar_gazebo?tab=readme-ov-file_ ;
+
+9 - 
     
      
