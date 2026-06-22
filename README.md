@@ -5,10 +5,10 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
 
 ### Pré-Requisitos de Sistemas
 
-    1 - Utilize a distribuição **Ubuntu 24.04 LTS**
+1 - Utilize a distribuição **Ubuntu 24.04 LTS**
     
-    2 - Instale o **Docker 29.5.3**
+2 - Instale o **Docker 29.5.3**
 
-    3 - Possua acesso aos navegadores Google Chrome, Mozilla Firefox, Microsoft Edge, Safari ou similares
+3 - Possua acesso aos navegadores Google Chrome, Mozilla Firefox, Microsoft Edge, Safari ou similares
     
      
