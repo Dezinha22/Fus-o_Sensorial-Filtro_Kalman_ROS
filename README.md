@@ -36,6 +36,17 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ cd lar_gazebo/
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$  
 
-10 - 
+10 - Utilize o comando *ls* ou similar para verificar os arquivos contidos na pasta lar_gazebo e validar se a transferência do repositório foi satisfeita. A saída será similar a essa:
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ ls
+    2026-06-16-00-36-58-001.bag  docker                LICENSE      README.md
+    april_tags                   docker-compose.yml    maps         scripts
+    CMakeLists.txt               husky_accessories.sh  models       worlds
+    config                       husky_urdf_extras     Ola
+    doc                          launch                package.xml
+
+11 - 
+
+
     
      
