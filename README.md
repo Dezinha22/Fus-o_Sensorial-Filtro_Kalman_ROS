@@ -25,6 +25,17 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
 
 8 - Clone o repositório do lar_gazebo: _https://github.com/lar-deeufba/lar_gazebo?tab=readme-ov-file_ ;
 
-9 - 
+9 - Localize o local onde o repositório foi clonado e acesse a pasta. Para isso, utilize os comandos *cd*, *find*, *locale*, *ls*, *pwd*, dentre outros (verifique o intem 7). Você deve chegar a algo similar a isso: 
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ cd
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ ls
+    CoppeliaSim  google-chrome-stable_current_amd64.deb  Music      rosbags_env
+    Desktop      lar_gazebo                              OpenPCDet  Templates
+    Documents    miniconda3                              Pictures   Videos
+    Downloads    Miniconda3-latest-Linux-x86_64.sh       Public
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ cd lar_gazebo/
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$  
+
+10 - 
     
      
