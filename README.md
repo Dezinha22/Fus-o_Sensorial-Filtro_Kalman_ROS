@@ -38,14 +38,35 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
 
 10 - Utilize o comando *ls* ou similar para verificar os arquivos contidos na pasta lar_gazebo e validar se a transferência do repositório foi satisfeita. A saída será similar a essa:
 
-    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ ls
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ cd lar_gazebo/
+    (basqe) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ ls
     2026-06-16-00-36-58-001.bag  docker                LICENSE      README.md
     april_tags                   docker-compose.yml    maps         scripts
     CMakeLists.txt               husky_accessories.sh  models       worlds
     config                       husky_urdf_extras     Ola
     doc                          launch                package.xml
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ pwd
+    /home/matheus/lar_gazebo
+    
+11 - Incie o docker desktop. Cuidado ao utilizar o comando *systemctl --user start docker-desktop*. Ele pode crashar seu sistema operacional. Exigindo um logoff ou uma reinicialização forçada. Priorize a execução tradicional (pelo atalho gerado no momento da instalação).
 
-11 - 
+12 - Valide a inicialização do Docker pelo comando *sudo systemctl status docker*. Esse processo não precisa ser somente executado dentro da pasta lar_gazebo.
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ sudo systemctl status docker
+    ● docker.service - Docker Application Container Engine
+     Loaded: loaded (/usr/lib/systemd/system/docker.service; enabled; preset: e>
+     Active: active (running) since Mon 2026-06-22 22:46:04 -03; 1 day 3h ago
+    TriggeredBy: ● docker.socket
+       Docs: https://docs.docker.com
+       Main PID: 1226 (dockerd)
+          Tasks: 14
+    Memory: 107.1M (peak: 144.4M swap: 10.5M swap peak: 11.4M)
+        CPU: 10.835s
+     CGroup: /system.slice/docker.service
+             └─1226 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/cont>
+
+
+
 
 
     
