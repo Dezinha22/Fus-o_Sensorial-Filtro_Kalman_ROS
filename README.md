@@ -65,6 +65,49 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
      CGroup: /system.slice/docker.service
              └─1226 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/cont>
 
+13 - Crie o ambiente por meio do comando *docker compose up -d*. Esse comando será responsável por gerar o contêiner e subir a imagem com os demais arquivos contidos no repositório clonado do github do LaR - UFBA. A saída esperada é a seguir: 
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose up -d
+    [+] up 1/1
+     ! Image l... pull access denied for lar-gazebo, repository does not exist or may require 'docker login' 31.1s
+    [+] Building 13.9s (20/20) FINISHED                                             
+     => [internal] load local bake definitions                                 0.0s
+     => => reading from stdin 639B                                             0.0s
+     => [internal] load build definition from Dockerfile.noetic                0.9s
+     => => transferring dockerfile: 4.38kB                                     0.2s
+     => [internal] load metadata for docker.io/osrf/ros:noetic-desktop-full    2.8s
+     => [auth] osrf/ros:pull token for registry-1.docker.io                    0.0s
+     => [internal] load .dockerignore                                          0.4s
+     => => transferring context: 112B                                          0.0s
+     => [ 1/12] FROM docker.io/osrf/ros:noetic-desktop-full@sha256:7dbfb9576d  0.5s
+     => => resolve docker.io/osrf/ros:noetic-desktop-full@sha256:7dbfb9576d8e  0.4s
+     => [internal] load build context                                          1.0s
+     => => transferring context: 10.64kB                                       0.1s
+     => CACHED [ 2/12] RUN apt-get update && apt-get install -y --no-install-  0.0s
+     => CACHED [ 3/12] RUN if ! getent group "1000" >/dev/null; then groupadd  0.0s
+     => CACHED [ 4/12] RUN mkdir -p /ws/src                                    0.0s
+     => CACHED [ 5/12] WORKDIR /ws                                             0.0s
+     => CACHED [ 6/12] COPY . /ws/src/lar_gazebo                               0.0s
+     => CACHED [ 7/12] RUN source /opt/ros/noetic/setup.bash     && rosdep in  0.0s
+     => CACHED [ 8/12] COPY docker/entrypoint.sh /ros_entrypoint_lar.sh        0.0s
+     => CACHED [ 9/12] RUN chmod +x /ros_entrypoint_lar.sh                     0.0s
+     => CACHED [10/12] RUN USER_HOME="$(getent passwd "ros" | cut -d: -f6)"    0.0s
+     => CACHED [11/12] RUN USER_HOME="$(getent passwd "ros" | cut -d: -f6)"    0.0s
+     => CACHED [12/12] WORKDIR /ws                                             0.0s
+     => exporting to image                                                     3.0s
+     => => exporting layers                                                    0.0s
+     => => exporting manifest sha256:6489891325da281a48fe69a9146ad18512cee46e  0.2s
+     => => exporting config sha256:2d892a6bff95c9db42228b1fc2f11f1556a6da4f9e  0.1s
+     => => exporting attestation manifest sha256:0a71f638aa78964dfa808dab860f  1.0s
+     => => exporting manifest list sha256:a2dc961537a9cdf1061cbe78a799a97b1c1  0.5s
+     => => naming to docker.io/library/lar-gazebo:noetic                       0.2s
+    [+] up 2/2acking to docker.io/library/lar-gazebo:noetic                    0.2s
+     ✔ Image lar-gazebo:noetic     Built                                       45.5s
+     ✔ Container lar_gazebo_noetic Started                                      8.8s
+
+    What's next:
+        Filter, search, and stream logs from all your Compose services
+        in one place with Docker Desktop's Logs view. docker-desktop://dashboard/logs?appId=lar_gazebo
 
 
 
