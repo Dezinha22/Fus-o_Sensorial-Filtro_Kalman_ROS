@@ -21,7 +21,7 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
 
 6 - Acesse o terminal (recomenda-se utilizar o _[terminator](https://gnome-terminator.org/)_);
 
-7 - Localize os arquivos transferidos e reserve os seus respectivos endereços. Para localizá-los, pode utilizar o comando *find*, *locale*, *ls*, *pwd*, dentre outros. Consulte o ([link](https://www.hostinger.com/br/tutoriais/comandos-linux)), ([link](https://info-ee.surrey.ac.uk/Teaching/Unix/index.html)) ou similares para ter conhecimento de outros comandos e sua estrutura;
+7 - Localize os arquivos transferidos e reserve os seus respectivos endereços. Para localizá-los, pode utilizar o comando *find*, *locale*, *ls*, *pwd*, dentre outros. Consulte o ([Tutorial A](https://www.hostinger.com/br/tutoriais/comandos-linux)), ([Tutprial B](https://info-ee.surrey.ac.uk/Teaching/Unix/index.html)) ou similares para ter conhecimento de outros comandos e sua estrutura;
 
 8 - Clone o repositório do lar_gazebo: _https://github.com/lar-deeufba/lar_gazebo?tab=readme-ov-file_ ;
 
