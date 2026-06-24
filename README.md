@@ -19,7 +19,7 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
 
 ### Primeiros Passos 
 
-6 - Acesse o terminal (recomenda-se utilizar o _terminator_);
+6 - Acesse o terminal (recomenda-se utilizar o _[terminator](https://gnome-terminator.org/)_);
 
 7 - Localize os arquivos transferidos e reserve os seus respectivos endereços. Para localizá-los, pode utilizar o comando *find*, *locale*, *ls*, *pwd*, dentre outros. Consulte o ([link](https://www.hostinger.com/br/tutoriais/comandos-linux)), ([link](https://info-ee.surrey.ac.uk/Teaching/Unix/index.html)) ou similares para ter conhecimento de outros comandos e sua estrutura;
 
