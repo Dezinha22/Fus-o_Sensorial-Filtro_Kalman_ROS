@@ -25,7 +25,7 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
 
 8 - Clone o repositório do lar_gazebo: _https://github.com/lar-deeufba/lar_gazebo?tab=readme-ov-file_ ;
 
-9 - Localize o local onde o repositório foi clonado e acesse a pasta. Para isso, utilize os comandos *cd*, *find*, *locale*, *ls*, *pwd*, dentre outros (verifique o intem 7). Você deve chegar a algo similar a isso: 
+9 - Localize o local onde o repositório foi clonado e acesse a pasta. Para isso, pode utilizar os comandos *cd*, *find*, *locale*, *ls*, *pwd*, dentre outros (verifique o intem 7). Você deve chegar a algo similar a isso: 
 
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ cd
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ ls
