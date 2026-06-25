@@ -117,11 +117,25 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
     NAME                IMAGE               COMMAND                  SERVICE      CREATED          STATUS          PORTS
     lar_gazebo_noetic   lar-gazebo:noetic   "/ros_entrypoint_lar…"   lar_gazebo   22 minutes ago   Up 22 minutes   
 
-16 - Acesse o container recém-criado pelo comando *docker compose exec lar_gazebo bash*. A saída do comando deve ser similiar a:
+16 - Acesse o contêiner recém-criado pelo comando *docker compose exec lar_gazebo bash*. A saída do comando deve ser similiar a:
 
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose exec lar_gazebo bash
     ros@docker-desktop:/ws$ 
 
+17 - Utilize o comando *pw* para validar o local onde está navegando. Ele deve retornar o seguinte:
+
+    ros@docker-desktop:/ws$ pwd
+    /ws
+
+18 - Após esse processo, utilize o comando *ls ~/Desktop/ | grep husky* para localizar a bag extraída desse repositório. Importante, você pode ajustar as atribuições contidas no comando para otimizar a busca. Assim como, a localização do arquivo também pode ser alcançando utilizando os comandos contidos no item 7 desse tutorial. O comando deve ser executado em outra aba do terminator, executado diretamente no ambiente local e a saida deve ser algo similiar a:
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ ls ~/Desktop/ | grep husky
+    husky_kalman_fusion
+
+19 - Nessa etapa você realizará a importação da bag para o container docker. Para isso, execute o comando docker cp *~/Desktop/husky_kalman_fusion lar_gazebo_noetic:/ws/src/husky_kalman_fusion* fora do ambiente do docker. A saida será similar a: 
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/Desktop/Atividade_II_Localização_Robotica$ docker cp ~/Desktop/Atividade_II_Localização_Robotica/husky_kalman_fusion_backup lar_gazebo_noetic:/ws/src/husky_kalman_fusion
+    Successfully copied 9.98kB (transferred 21kB) to lar_gazebo_noetic:/ws/src/husky_kalman_fusion
 
     
      
