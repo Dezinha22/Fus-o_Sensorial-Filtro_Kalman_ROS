@@ -197,3 +197,56 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
       ros@docker-desktop:/ws$ ls /ws/*.bag
     /ws/2026-06-16-00-36-58-001.bag
 
+## Execução
+
+O processo de execução é composto por três pilares principais:
+
+A) Obtenção dos dados;
+
+B) Aplicação do Filtro de Kalm; 
+
+C) Análise do Filtro de Kalm. 
+
+Para o processo em tela, é imprescindivel que os dados sejam lidos quando o processo de análise do filtro de kalm e aplicação do filtro de kalm esteja ativo. 
+
+Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. Dessa forma, em um terminal isolado (utilize o terminator) e realize o processo a seguir:
+
+25 - Utilize o comando *cd* para acessar a pasta clonada do Github do LaR UFBA e, dentro da pasta, execute o comando *docker compose exec lar_gazebo bash* para acessar o mesmo contêiner criado. Para melhor entendimento dessa etapa, iremos chamar esse primeiro terminal de terminal Alpha. A saida deve ser similar a essa:
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ cd ~/lar_gazebo
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose exec lar_gazebo bash
+    ros@docker-desktop:/ws$ 
+
+26 - No terminal Alpha, recomendo executar o comando *roscore* para garantir a execução do ROS. A saida deverá ser semelhante a essa:
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose exec lar_gazebo bash
+    ros@docker-desktop:/ws$ roscore
+    ... logging to /home/ros/.ros/log/83ab5690-7045-11f1-b278-525400123456/roslaunch-docker-desktop-487.log
+    Checking log directory for disk usage. This may take a while.
+    Press Ctrl-C to interrupt
+    Done checking log file disk usage. Usage is <1GB.
+
+    started roslaunch server http://docker-desktop:58241/
+    ros_comm version 1.17.4
+
+
+    SUMMARY
+    ========
+
+    PARAMETERS
+     * /rosdistro: noetic
+     * /rosversion: 1.17.4
+
+    NODES
+
+    auto-starting new master
+    process[master]: started with pid [495]
+    ROS_MASTER_URI=http://docker-desktop:11311/
+
+    setting /run_id to 83ab5690-7045-11f1-b278-525400123456
+    process[rosout-1]: started with pid [505]
+    started core service [/rosout]
+
+27 - Mantenha o terminal Alpha ativo e, em um sengundo terminal, execute os mesmos passos do item 25. Esse novo terminal chamaremos de terminal Bravo.
+
+28 - No terminal Bravo
