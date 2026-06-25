@@ -48,9 +48,9 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ pwd
     /home/matheus/lar_gazebo
     
-11 - Incie o docker desktop. Cuidado ao utilizar o comando *systemctl --user start docker-desktop*. Ele pode crashar seu sistema operacional. Exigindo um logoff ou uma reinicialização forçada. Priorize a execução tradicional (pelo atalho gerado no momento da instalação).
+11 - Incie o docker desktop. Cuidado ao utilizar o comando *systemctl --user start docker-desktop*. Ele pode crashar seu sistema operacional. Exigindo um logoff ou uma reinicialização forçada. Priorize a execução tradicional (pelo atalho gerado no momento da instalação);
 
-12 - Valide a inicialização do Docker pelo comando *sudo systemctl status docker*. Esse processo não precisa ser somente executado dentro da pasta lar_gazebo.
+12 - Valide a inicialização do Docker pelo comando *sudo systemctl status docker*. Esse processo não precisa ser somente executado dentro da pasta lar_gazebo;
 
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ sudo systemctl status docker
     ● docker.service - Docker Application Container Engine
@@ -109,7 +109,18 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
         Filter, search, and stream logs from all your Compose services
         in one place with Docker Desktop's Logs view. docker-desktop://dashboard/logs?appId=lar_gazebo
 
+14 - Caso apresente a mensagem de erro *! Image l... pull access denied for lar-gazebo, repository does not exist or may require 'docker login' 31.1s*. Não se assuste, isso costuma ser decorrente do fato do repositório não ter sido localizada na internet. Esse fato não altera no sucesso do pipiline, uma vez que ele será executado com os arquivos locais (obtidos após clonar o repositório do github).
 
+15 - Utilize o comando *docker compose ps* para validar a criação do ambiente. A saída deve ser similar a esposta seguir:
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose ps
+    NAME                IMAGE               COMMAND                  SERVICE      CREATED          STATUS          PORTS
+    lar_gazebo_noetic   lar-gazebo:noetic   "/ros_entrypoint_lar…"   lar_gazebo   22 minutes ago   Up 22 minutes   
+
+16 - Acesse o container recém-criado pelo comando *docker compose exec lar_gazebo bash*. A saída do comando deve ser similiar a:
+
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose exec lar_gazebo bash
+    ros@docker-desktop:/ws$ 
 
 
     
