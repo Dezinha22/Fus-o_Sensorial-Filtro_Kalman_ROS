@@ -284,3 +284,5 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
  * Para executar o filtro com dados da odometria, IMU e GPS:
 
 30 - Agora, continue com os terminais Alpha, Bravo e Charle ativos e abra o terminal Delta. Ele será responsável por rodar a Bag. Para isso, repita o processo do item 25 e em seguida execute o comando *rosbag play /ws/2026-06-16-00-36-58-001.bag --clock*. 
+
+31 - 
