@@ -249,4 +249,38 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
 
 27 - Mantenha o terminal Alpha ativo e, em um sengundo terminal, execute os mesmos passos do item 25. Esse novo terminal chamaremos de terminal Bravo.
 
-28 - No terminal Bravo
+28 - No terminal Bravo iremos ativar o avaliador do filtro de Kalm, ele será responsável por coletar os dados gerados pelo pacote ROS (onde estão localizadas as diferentes versões do filtro de Kalm) e compará-lo com o referencial (graund truth). Para isso, exeute o comando *roslaunch husky_kalman_fusion evaluate.launch*. A saída do comando deverá ser semelhante a:
+
+    ros@docker-desktop:/ws$ roslaunch husky_kalman_fusion evaluate.launch
+    ... logging to /home/ros/.ros/log/83ab5690-7045-11f1-b278-525400123456/roslaunch-docker-desktop-512.log
+    Checking log directory for disk usage. This may take a while.
+    Press Ctrl-C to interrupt
+    Done checking log file disk usage. Usage is <1GB.
+
+    started roslaunch server http://docker-desktop:59439/
+
+    SUMMARY
+    ========
+
+    PARAMETERS
+     * /rosdistro: noetic
+     * /rosversion: 1.17.4
+
+    NODES
+      /
+        evaluate_localization (husky_kalman_fusion/evaluate_localization.py)
+
+    ROS_MASTER_URI=http://localhost:11311
+
+    process[evaluate_localization-1]: started with pid [526]    
+    [INFO] [1782358272.596614]: Nó de avaliação iniciado. Aguardando dados...
+
+29 - Mantenha os terminais Alpha e Bravo ativos e abra o terminal Charle. Ele será responsavél pela execução do filtro de Kalm. Para isso, repita o processo do item 25 e em seguida execute um dos comandos abaixo:
+
+ * Para executar o filtro somente com odometria: *roslaunch husky_kalman_fusion husky_ekf_odom_only.launch*;
+   
+ * Para executar o filtro com dados da odometria e IMU:
+   
+ * Para executar o filtro com dados da odometria, IMU e GPS:
+
+30 - Agora, continue com os terminais Alpha, Bravo e Charle ativos e abra o terminal Delta. Ele será responsável por rodar a Bag. Para isso, repita o processo do item 25 e em seguida execute o comando *rosbag play /ws/2026-06-16-00-36-58-001.bag --clock*. 
