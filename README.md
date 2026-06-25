@@ -285,4 +285,4 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
 
 30 - Agora, continue com os terminais Alpha, Bravo e Charle ativos e abra o terminal Delta. Ele será responsável por rodar a Bag. Para isso, repita o processo do item 25 e em seguida execute o comando *rosbag play /ws/2026-06-16-00-36-58-001.bag --clock*. 
 
-31 - 
+31 - Após a execução da bag, aguarde ao menos um minuto e encerre o processo no terminal Bravo e execeute o comando *docker cp lar_gazebo_noetic:/home/ros/.ros/results/20260625_035150 ~/Desktop/resultados_odom_only* em um outro terminal que chamaremos de terminal Echo. O terminal Echo será responsável por transferir os arquivos gerados pelo avalidor para o desktop da maquina local. Para os testes subsequentes, só é necessário modificar o nome da pasta que gostaria de nomear e ajustar o nome da pasta de origem dos dados com objetivo de selecionar os arquivos corretos (ex: modificar 20260625_035150 pelo endereço atualizado gerado no terminal Bravo).
