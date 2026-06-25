@@ -187,4 +187,13 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
     [build] Runtime: 13.8 seconds total.                                                         
     [build] Note: Workspace packages have changed, please re-source setup files to use them.
 
- 23 -     
+ 23 - Nesse momento será necessário possuir a base de dados no mesmo local que está o ROS, a bag do ROS e demais processos. Portanto, é necessário importar a BAG para o docker. Nesse caso, pode utilizar o mesmo comando da etapa 22, aplicando os ajustes necessários em decorrência de serem arquivos com nomes diferente. A saber, o comando é *docker cp ~/lar_gazebo/2026-06-16-00-36-58-001.bag lar_gazebo_noetic:/ws/* e a saida deve ser semelhante a:
+
+     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ docker cp ~/lar_gazebo/2026-06-16-00-36-58-001.bag     lar_gazebo_noetic:/ws/
+    Successfully copied 24.4GB (transferred 24.4GB) to lar_gazebo_noetic:/ws/
+
+  24 - Após esse processo de importação da BAG (é natural demorar um pouco devido ao tamanho do arquivo), é importante verificar se de fato ela está localizada no docker. Para isso, execute o comando *ls /ws/*.bag* ou similar. A saida deve ser algo parecido com:
+
+      ros@docker-desktop:/ws$ ls /ws/*.bag
+    /ws/2026-06-16-00-36-58-001.bag
+
