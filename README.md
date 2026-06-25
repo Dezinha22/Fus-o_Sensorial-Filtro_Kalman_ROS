@@ -137,5 +137,54 @@ Repositório com as steps necessárias a aplicação do filtro kalman a partir d
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/Desktop/Atividade_II_Localização_Robotica$ docker cp ~/Desktop/Atividade_II_Localização_Robotica/husky_kalman_fusion_backup lar_gazebo_noetic:/ws/src/husky_kalman_fusion
     Successfully copied 9.98kB (transferred 21kB) to lar_gazebo_noetic:/ws/src/husky_kalman_fusion
 
-    
-     
+20 - Agora, verifique se o arquivo efetivamente foi transferido para o docker. Para isso, utilize o comando *cd*, *pwd*, dentre outros direcionados a localização e compartilhamento de endereço de pastas/arquivos. Por exemplo, temos o comando  *cd /ws/src/husky_kalman_fusion* para acessar a bag nomeada husky_kalman_fusion. A saida no terminal deve ser semelhante a:
+
+    ros@docker-desktop:/ws/src/husky_kalman_fusion$ 
+
+21 - Nesse momento, verifique os arquivos contidos na pasta copiada para confirmar que a transferência foi realizada com sucesso. Para isso, utilize o *ls* para verificar os arquivos contidos dentro da bag. A estrtura deve ser parecida com:
+
+    ros@docker-desktop:/ws/src/husky_kalman_fusion$ ls
+    CMakeLists.txt  config  launch  package.xml  scripts
+
+22 - Agora, retorne a raiz do workspace e compile a bag. Para isso, utilize o comando *catkin build husky_kalman_fusion* ou similar. A saída da execução desse comando será parecida com: 
+
+    ros@docker-desktop:/ws$ catkin build husky_kalman_fusion
+    --------------------------------------------
+    Profile:                     default
+    Extending:          [cached] /opt/ros/noetic
+    Workspace:                   /ws
+    --------------------------------------------
+    Build Space:        [exists] /ws/build
+    Devel Space:        [exists] /ws/devel
+    Install Space:      [unused] /ws/install
+    Log Space:          [exists] /ws/logs
+    Source Space:       [exists] /ws/src
+    DESTDIR:            [unused] None
+    --------------------------------------------
+    Devel Space Layout:          linked
+    Install Space Layout:        None
+    --------------------------------------------
+    Additional CMake Args:       None
+    Additional Make Args:        None
+    Additional catkin Make Args: None
+    Internal Make Job Server:    True
+    Cache Job Environments:      False
+    --------------------------------------------
+    Buildlisted Packages:        None
+    Skiplisted Packages:         None
+    --------------------------------------------
+    Workspace configuration appears valid.
+    --------------------------------------------
+    [build] Found 2 packages in 0.0 seconds.                      
+    [build] Updating package table.                               
+    Starting  >>> husky_kalman_fusion                             
+    Finished  <<< husky_kalman_fusion                [ 13.6 seconds ]                            
+    [build] Summary: All 1 packages succeeded!                                                   
+    [build]   Ignored:   1 packages were skipped or are skiplisted.                              
+    [build]   Warnings:  None.                                                                   
+    [build]   Abandoned: None.                                                                   
+    [build]   Failed:    None.                                                                   
+    [build] Runtime: 13.8 seconds total.                                                         
+    [build] Note: Workspace packages have changed, please re-source setup files to use them.
+
+ 23 -     
