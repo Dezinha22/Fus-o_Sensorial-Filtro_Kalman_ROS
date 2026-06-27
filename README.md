@@ -50,7 +50,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ pwd
     /home/matheus/lar_gazebo
     
-11 - Incie o docker desktop. Cuidado ao utilizar o comando *systemctl --user start docker-desktop*. Ele pode crashar seu sistema operacional. Exigindo um logoff ou uma reinicialização forçada. Priorize a execução tradicional (pelo atalho gerado no momento da instalação);
+11 - Incie o docker desktop. Cuidado ao utilizar o comando *systemctl --user start docker-desktop*. Ele pode crashar seu sistema operacional. Exigindo um logoff ou uma reinicialização forçada. Priorize a execução pelo atalho gerado no momento da instalação;
 
 12 - Valide a inicialização do Docker pelo comando *sudo systemctl status docker*. Esse processo não precisa ser somente executado dentro da pasta lar_gazebo;
 
@@ -67,7 +67,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
      CGroup: /system.slice/docker.service
              └─1226 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/cont>
 
-13 - Crie o ambiente por meio do comando *docker compose up -d*. Esse comando será responsável por gerar o contêiner e subir a imagem com os demais arquivos contidos no repositório clonado do github do LaR - UFBA. A saída esperada é a seguir: 
+13 - Crie o ambiente por meio do comando *docker compose up -d*. Esse comando será responsável por gerar o container e subir a imagem com os demais arquivos contidos no repositório clonado do github do LaR - UFBA. A saída esperada é a seguir: 
 
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose up -d
     [+] up 1/1
@@ -119,7 +119,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
     NAME                IMAGE               COMMAND                  SERVICE      CREATED          STATUS          PORTS
     lar_gazebo_noetic   lar-gazebo:noetic   "/ros_entrypoint_lar…"   lar_gazebo   22 minutes ago   Up 22 minutes   
 
-16 - Acesse o contêiner recém-criado pelo comando *docker compose exec lar_gazebo bash*. A saída do comando deve ser similiar a:
+16 - Acesse o container recém-criado pelo comando *docker compose exec lar_gazebo bash*. A saída do comando deve ser similiar a:
 
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose exec lar_gazebo bash
     ros@docker-desktop:/ws$ 
@@ -213,7 +213,7 @@ Para o processo em tela, é imprescindivel que os dados sejam lidos quando o pro
 
 Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. Dessa forma, em um terminal isolado (utilize o terminator) e realize o processo a seguir:
 
-25 - Utilize o comando *cd* para acessar a pasta clonada do Github do LaR UFBA e, dentro da pasta, execute o comando *docker compose exec lar_gazebo bash* para acessar o mesmo contêiner criado. Para melhor entendimento dessa etapa, iremos chamar esse primeiro terminal de terminal Alpha. A saida deve ser similar a essa:
+25 - Utilize o comando *cd* para acessar a pasta clonada do Github do LaR UFBA e, dentro da pasta, execute o comando *docker compose exec lar_gazebo bash* para acessar o mesmo container criado. Para melhor entendimento dessa etapa, iremos chamar esse primeiro terminal de terminal Alpha. A saida deve ser similar a essa:
 
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ cd ~/lar_gazebo
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ docker compose exec lar_gazebo bash
