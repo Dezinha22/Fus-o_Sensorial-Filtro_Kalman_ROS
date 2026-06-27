@@ -1,5 +1,7 @@
 # Fusao_Sensorial-Filtro_Kalman_ROS
-Repositório com as steps necessárias a aplicação do filtro kalman a partir do input de dados provenientes do ambiente simulado do LaR - UFBA no gazebo e o clearpath husky.
+Repositório com as etapas e arquivos necessários para a aplicação do filtro kalman.
+
+A base de dados principal é obtida a partir do input de dados provenientes do ambiente simulado do [LaR - UFBA](https://github.com/lar-deeufba/lar_gazebo) e o clearpath husky.
 
 ## Configuração de Startup
 
