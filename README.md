@@ -25,7 +25,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
 
 7 - Localize os arquivos transferidos e reserve os seus respectivos endereços. Para localizá-los, pode utilizar o comando *find*, *locale*, *ls*, *pwd*, dentre outros. Consulte o [Tutorial A](https://www.hostinger.com/br/tutoriais/comandos-linux), [Tutorial B](https://info-ee.surrey.ac.uk/Teaching/Unix/index.html) ou similares para ter conhecimento de outros comandos e sua estrutura;
 
-8 - Clone o repositório do lar_gazebo: _https://github.com/lar-deeufba/lar_gazebo?tab=readme-ov-file_ ;
+8 - Clone o repositório do [LaR - UFBA](https://github.com/lar-deeufba/lar_gazebo);
 
 9 - Localize o local onde o repositório foi clonado e acesse a pasta. Para isso, pode utilizar os comandos *cd*, *find*, *locale*, *ls*, *pwd*, dentre outros (verifique o intem 7). Você deve chegar a algo similar a isso: 
 
