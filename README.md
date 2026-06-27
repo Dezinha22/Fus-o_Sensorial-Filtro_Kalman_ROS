@@ -1,5 +1,5 @@
-# Fusao_Sensorial-Filtro_Kalman_ROS
-Repositório com as etapas e arquivos necessários para a aplicação do filtro kalman.
+# Fusao_Sensorial-Filtro_Kalmanan_ROS
+Repositório com as etapas e os arquivos necessários para a aplicação do filtro Kalmanan.
 
 A base de dados principal é obtida a partir do input de dados provenientes do ambiente simulado do [LaR - UFBA](https://github.com/lar-deeufba/lar_gazebo) e o clearpath husky.
 
@@ -17,7 +17,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
 
 4 - Faça a transferência dos dados de simulação contidos no [google drive](https://drive.google.com/drive/folders/1lF4HExtL49w9botrIfjxp7nfLHgtEdTF?usp=drive_link).
 
-5 - Faça a transferência do [pacote ROS](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/%20Filtro%20de%20Kalman_Matheus_27_Jun_26.tar.gz) contido neste repositório.
+5 - Faça a transferência do [pacote ROS](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalmanan_ROS/blob/main/%20Filtro%20de%20Kalmanan_Matheus_27_Jun_26.tar.gz) contido neste repositório.
 
 ### Primeiros Passos 
 
@@ -111,7 +111,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
         Filter, search, and stream logs from all your Compose services
         in one place with Docker Desktop's Logs view. docker-desktop://dashboard/logs?appId=lar_gazebo
 
-14 - Caso apresente a mensagem de erro *! Image l... pull access denied for lar-gazebo, repository does not exist or may require 'docker login' 31.1s*. Não se assuste, isso costuma ser decorrente do fato do repositório não ter sido localizada na internet. Esse fato não altera no sucesso do pipiline, uma vez que ele será executado com os arquivos locais (obtidos após clonar o repositório do github).
+14 - Caso apresente a mensagem de erro *! Image l... pull access denied for lar-gazebo, repository does not exist or may require 'docker login' 31.1s*. Não se assuste, isso costuma ser decorrente do fato do repositório não ter sido localizada na busca. Esse fato não altera o sucesso do pipiline, uma vez que ele será executado com os arquivos locais (obtidos após clonar o repositório do github).
 
 15 - Utilize o comando *docker compose ps* para validar a criação do ambiente. A saída deve ser similar a esposta seguir:
 
@@ -132,25 +132,25 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
 18 - Após esse processo, utilize o comando *ls ~/Desktop/ | grep husky* para localizar a bag extraída desse repositório. Importante, você pode ajustar as atribuições contidas no comando para otimizar a busca. Assim como, a localização do arquivo também pode ser alcançando utilizando os comandos contidos no item 7 desse tutorial. O comando deve ser executado em outra aba do terminator, executado diretamente no ambiente local e a saida deve ser algo similiar a:
 
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ ls ~/Desktop/ | grep husky
-    husky_kalman_fusion
+    husky_Kalmanan_fusion
 
-19 - Nessa etapa você realizará a importação da bag para o container docker. Para isso, execute o comando docker cp *~/Desktop/husky_kalman_fusion lar_gazebo_noetic:/ws/src/husky_kalman_fusion* fora do ambiente do docker. A saida será similar a: 
+19 - Nessa etapa você realizará a importação do pacote ROS para o container docker. Para isso, execute o comando docker cp *~/Desktop/husky_Kalmanan_fusion lar_gazebo_noetic:/ws/src/husky_Kalmanan_fusion* fora do ambiente do docker. A saida será similar a: 
 
-    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/Desktop/Atividade_II_Localização_Robotica$ docker cp ~/Desktop/Atividade_II_Localização_Robotica/husky_kalman_fusion_backup lar_gazebo_noetic:/ws/src/husky_kalman_fusion
-    Successfully copied 9.98kB (transferred 21kB) to lar_gazebo_noetic:/ws/src/husky_kalman_fusion
+    (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/Desktop/Atividade_II_Localização_Robotica$ docker cp ~/Desktop/Atividade_II_Localização_Robotica/husky_Kalmanan_fusion_backup lar_gazebo_noetic:/ws/src/husky_Kalmanan_fusion
+    Successfully copied 9.98kB (transferred 21kB) to lar_gazebo_noetic:/ws/src/husky_Kalmanan_fusion
 
-20 - Agora, verifique se o arquivo efetivamente foi transferido para o docker. Para isso, utilize o comando *cd*, *pwd*, dentre outros direcionados a localização e compartilhamento de endereço de pastas/arquivos. Por exemplo, temos o comando  *cd /ws/src/husky_kalman_fusion* para acessar a bag nomeada husky_kalman_fusion. A saida no terminal deve ser semelhante a:
+20 - Agora, verifique se o arquivo efetivamente foi transferido para o container docker em execução. Para isso, utilize o comando *cd*, *pwd*, dentre outros direcionados a localização e compartilhamento de endereço de pastas/arquivos. Por exemplo, temos o comando  *cd /ws/src/husky_Kalmanan_fusion* para acessar a bag nomeada husky_Kalmanan_fusion. A saida no terminal deve ser semelhante a:
 
-    ros@docker-desktop:/ws/src/husky_kalman_fusion$ 
+    ros@docker-desktop:/ws/src/husky_Kalmanan_fusion$ 
 
 21 - Nesse momento, verifique os arquivos contidos na pasta copiada para confirmar que a transferência foi realizada com sucesso. Para isso, utilize o *ls* para verificar os arquivos contidos dentro da bag. A estrtura deve ser parecida com:
 
-    ros@docker-desktop:/ws/src/husky_kalman_fusion$ ls
+    ros@docker-desktop:/ws/src/husky_Kalmanan_fusion$ ls
     CMakeLists.txt  config  launch  package.xml  scripts
 
-22 - Agora, retorne a raiz do workspace e compile a bag. Para isso, utilize o comando *catkin build husky_kalman_fusion* ou similar. A saída da execução desse comando será parecida com: 
+22 - Agora, retorne a raiz do workspace e compile o pacote ROS. Para isso, utilize o comando *catkin build husky_Kalmanan_fusion* ou similar. A saída da execução desse comando será parecida com: 
 
-    ros@docker-desktop:/ws$ catkin build husky_kalman_fusion
+    ros@docker-desktop:/ws$ catkin build husky_Kalmanan_fusion
     --------------------------------------------
     Profile:                     default
     Extending:          [cached] /opt/ros/noetic
@@ -179,8 +179,8 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
     --------------------------------------------
     [build] Found 2 packages in 0.0 seconds.                      
     [build] Updating package table.                               
-    Starting  >>> husky_kalman_fusion                             
-    Finished  <<< husky_kalman_fusion                [ 13.6 seconds ]                            
+    Starting  >>> husky_Kalmanan_fusion                             
+    Finished  <<< husky_Kalmanan_fusion                [ 13.6 seconds ]                            
     [build] Summary: All 1 packages succeeded!                                                   
     [build]   Ignored:   1 packages were skipped or are skiplisted.                              
     [build]   Warnings:  None.                                                                   
@@ -189,7 +189,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
     [build] Runtime: 13.8 seconds total.                                                         
     [build] Note: Workspace packages have changed, please re-source setup files to use them.
 
- 23 - Nesse momento será necessário possuir a base de dados no mesmo local que está o ROS, a bag do ROS e demais processos. Portanto, é necessário importar a BAG para o docker. Nesse caso, pode utilizar o mesmo comando da etapa 22, aplicando os ajustes necessários em decorrência de serem arquivos com nomes diferente. A saber, o comando é *docker cp ~/lar_gazebo/2026-06-16-00-36-58-001.bag lar_gazebo_noetic:/ws/* e a saida deve ser semelhante a:
+ 23 - Nesse momento será necessário possuir a base de dados no mesmo local que está o ROS, o pacote ROS e os demais processos. Portanto, é necessário importar a BAG para o mesmo container docker. Nesse caso, pode utilizar o mesmo comando da etapa 22, aplicando os ajustes necessários em decorrência de serem arquivos com nomes diferente. A saber, o comando é *docker cp ~/lar_gazebo/2026-06-16-00-36-58-001.bag lar_gazebo_noetic:/ws/* e a saida deve ser semelhante a:
 
      (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~$ docker cp ~/lar_gazebo/2026-06-16-00-36-58-001.bag     lar_gazebo_noetic:/ws/
     Successfully copied 24.4GB (transferred 24.4GB) to lar_gazebo_noetic:/ws/
@@ -205,13 +205,13 @@ O processo de execução é composto por três pilares principais:
 
 A) Obtenção dos dados;
 
-B) Aplicação do Filtro de Kalm; 
+B) Aplicação do Filtro de Kalman; 
 
-C) Análise do Filtro de Kalm. 
+C) Análise do Filtro de Kalman. 
 
-Para o processo em tela, é imprescindivel que os dados sejam lidos quando o processo de análise do filtro de kalm e aplicação do filtro de kalm esteja ativo. 
+Para o processo em tela, é imprescindível que os dados sejam lidos quando o processo de avaliação do filtro de Kalman e a aplicação do filtro de Kalman estejam ativos. 
 
-Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. Dessa forma, em um terminal isolado (utilize o terminator) e realize o processo a seguir:
+Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. Portanto, recomendo utilizar o terminator e realize o processo a seguir:
 
 25 - Utilize o comando *cd* para acessar a pasta clonada do Github do LaR UFBA e, dentro da pasta, execute o comando *docker compose exec lar_gazebo bash* para acessar o mesmo container criado. Para melhor entendimento dessa etapa, iremos chamar esse primeiro terminal de terminal Alpha. A saida deve ser similar a essa:
 
@@ -251,9 +251,9 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
 
 27 - Mantenha o terminal Alpha ativo e, em um sengundo terminal, execute os mesmos passos do item 25. Esse novo terminal chamaremos de terminal Bravo.
 
-28 - No terminal Bravo iremos ativar o avaliador do filtro de Kalm, ele será responsável por coletar os dados gerados pelo pacote ROS (onde estão localizadas as diferentes versões do filtro de Kalm) e compará-lo com o referencial (graund truth). Para isso, exeute o comando *roslaunch husky_kalman_fusion evaluate.launch*. A saída do comando deverá ser semelhante a:
+28 - No terminal Bravo iremos ativar o avaliador do filtro de Kalman, ele será responsável por coletar os dados gerados pelo pacote ROS (onde estão localizadas as diferentes versões do filtro de Kalman) e compará-lo com o referencial (graund truth). Para isso, exeute o comando *roslaunch husky_Kalmanan_fusion evaluate.launch*. A saída do comando deverá ser semelhante a:
 
-    ros@docker-desktop:/ws$ roslaunch husky_kalman_fusion evaluate.launch
+    ros@docker-desktop:/ws$ roslaunch husky_Kalmanan_fusion evaluate.launch
     ... logging to /home/ros/.ros/log/83ab5690-7045-11f1-b278-525400123456/roslaunch-docker-desktop-512.log
     Checking log directory for disk usage. This may take a while.
     Press Ctrl-C to interrupt
@@ -270,21 +270,23 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
 
     NODES
       /
-        evaluate_localization (husky_kalman_fusion/evaluate_localization.py)
+        evaluate_localization (husky_Kalmanan_fusion/evaluate_localization.py)
 
     ROS_MASTER_URI=http://localhost:11311
 
     process[evaluate_localization-1]: started with pid [526]    
     [INFO] [1782358272.596614]: Nó de avaliação iniciado. Aguardando dados...
 
-29 - Mantenha os terminais Alpha e Bravo ativos e abra o terminal Charle. Ele será responsavél pela execução do filtro de Kalm. Para isso, repita o processo do item 25 e em seguida execute um dos comandos abaixo:
+29 - Mantenha os terminais Alpha e Bravo ativos e abra o terminal Charle. Ele será responsavél pela execução do filtro de Kalman. Para isso, repita o processo do item 25 e em seguida execute um dos comandos abaixo:
 
- * Para executar o filtro somente com odometria: *roslaunch husky_kalman_fusion husky_ekf_odom_only.launch*;
+ * Para executar o filtro somente com odometria: *roslaunch husky_Kalmanan_fusion husky_ekf_odom_only.launch*;
    
- * Para executar o filtro com dados da odometria e IMU: *roslaunch husky_kalman_fusion husky_ekf_odom_imu.launch*;
+ * Para executar o filtro com dados da odometria e IMU: *roslaunch husky_Kalmanan_fusion husky_ekf_odom_imu.launch*;
    
- * Para executar o filtro com dados da odometria, IMU e GPS: *roslaunch husky_kalman_fusion husky_ekf_odom_imu_gps.launch*
+ * Para executar o filtro com dados da odometria, IMU e GPS: *roslaunch husky_Kalmanan_fusion husky_ekf_odom_imu_gps.launch*
 
 30 - Agora, continue com os terminais Alpha, Bravo e Charle ativos e abra o terminal Delta. Ele será responsável por rodar a Bag. Para isso, repita o processo do item 25 e em seguida execute o comando *rosbag play /ws/2026-06-16-00-36-58-001.bag --clock*. 
 
-31 - Após a execução da bag, aguarde ao menos um minuto e encerre o processo no terminal Bravo e execeute o comando *docker cp lar_gazebo_noetic:/home/ros/.ros/results/20260625_035150 ~/Desktop/resultados_odom_only* em um outro terminal que chamaremos de terminal Echo. O terminal Echo será responsável por transferir os arquivos gerados pelo avalidor para o desktop da maquina local. Para os testes subsequentes, só é necessário modificar o nome da pasta que gostaria de nomear e ajustar o nome da pasta de origem dos dados com objetivo de selecionar os arquivos corretos (ex: modificar 20260625_035150 pelo endereço atualizado gerado no terminal Bravo).
+31 - Após finalizar a execução da bag, aguarde ao menos um minuto e encerre o processo no terminal Bravo. Depois, execute o comando similar a *docker cp lar_gazebo_noetic:/home/ros/.ros/results/20260625_035150 ~/Desktop/resultados_odom_only* em um outro terminal que chamaremos de terminal Echo. O terminal Echo será responsável por transferir os arquivos gerados pelo avalidor (20260625_035150) para o desktop da maquina local. Quanto aos testes subsequentes, só é necessário modificar o nome da pasta que gostaria de nomear e ajustar o nome da pasta de origem dos dados, com objetivo de selecionar os arquivos corretos (ex: modificar 20260625_035150 pelo endereço atualizado gerado no terminal Bravo).
+
+## Resultados
