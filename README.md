@@ -15,7 +15,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
 
 ### Pré-Requisitos de Arquivos
 
-4 - Faça a transferência dos dados de simulação contidos no [(link do google drive)](https://drive.google.com/drive/folders/1lF4HExtL49w9botrIfjxp7nfLHgtEdTF?usp=drive_link).
+4 - Faça a transferência dos dados de simulação contidos no [google drive](https://drive.google.com/drive/folders/1lF4HExtL49w9botrIfjxp7nfLHgtEdTF?usp=drive_link).
 
 5 - Faça a transferência do [pacote ROS](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/%20Filtro%20de%20Kalman_Matheus_27_Jun_26.tar.gz) contido neste repositório.
 
