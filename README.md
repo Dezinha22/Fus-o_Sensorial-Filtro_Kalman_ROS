@@ -290,3 +290,5 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
 31 - Após finalizar a execução da bag, aguarde ao menos um minuto e encerre o processo no terminal Bravo. Depois, execute o comando similar a *docker cp lar_gazebo_noetic:/home/ros/.ros/results/20260625_035150 ~/Desktop/resultados_odom_only* em um outro terminal que chamaremos de terminal Echo. O terminal Echo será responsável por transferir os arquivos gerados pelo avalidor (20260625_035150) para o desktop da maquina local. Quanto aos testes subsequentes, só é necessário modificar o nome da pasta que gostaria de nomear e ajustar o nome da pasta de origem dos dados, com objetivo de selecionar os arquivos corretos (ex: modificar 20260625_035150 pelo endereço atualizado gerado no terminal Bravo).
 
 ## Resultados
+
+![Texto Alternativo](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/trajectory_odo_imu_gps.png)
