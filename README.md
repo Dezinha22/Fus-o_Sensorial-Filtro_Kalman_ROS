@@ -291,4 +291,62 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
 
 ## Resultados
 
-![Texto Alternativo](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/trajectory_odo_imu_gps.png)
+Sob a ópitica dos erros, foram analisados os valores correspondentes de posição e orientação (guinada) do estimado  - pelos filtros de Kalman e seus inputs - frente ao ground truth. Dessa forma, temos: 
+1º) Somente Odometria: 
+
+            --- Posição ---
+    RMSE Posição:          2.4908 m
+    Erro Médio Posição:    2.3674 m
+    Erro Máximo Posição:   5.3114 m
+    Desvio Padrão Posição: 0.7742 m
+    Erro Final Posição:    2.2935 m
+
+        --- Orientação (Yaw) ---
+    RMSE Orientação (Yaw): 1.5991 rad
+    Erro Médio Yaw:        0.6896 rad
+    Erro Máximo Yaw:       5.3625 rad
+
+2º) Odometria + IMU:
+
+            --- Posição ---
+    RMSE Posição:          2.4089 m
+    Erro Médio Posição:    2.3348 m
+    Erro Máximo Posição:   5.3022 m
+    Desvio Padrão Posição: 0.5931 m
+    Erro Final Posição:    2.2935 m
+
+        --- Orientação (Yaw) ---
+    RMSE Orientação (Yaw): 1.2042 rad
+    Erro Médio Yaw:        0.2678 rad
+    Erro Máximo Yaw:       6.0776 rad
+
+3º) Odometria + IMU + GPS:
+
+            --- Posição ---
+    RMSE Posição:          2.3115 m
+    Erro Médio Posição:    2.3104 m
+    Erro Máximo Posição:   2.6082 m
+    Desvio Padrão Posição: 0.0712 m
+    Erro Final Posição:    2.2935 m
+
+        --- Orientação (Yaw) ---
+    RMSE Orientação (Yaw): 0.0049 rad
+    Erro Médio Yaw:        0.0043 rad
+    Erro Máximo Yaw:       0.0199 rad
+
+
+
+ posição final, temos: Os erros finais apresentaram taxas similares quando análisado sob óptica da posição final. A saber:
+
+
+Para fins de análise preliminar, serão adotadas as seguintes premissas:
+
+A) Os erros De forma geral, a aplicação dos filtros de Kalman reveleram um erro de A aplicação do filtro de Kalman com somente dados de odometria revelou uma estimativa instavél, com as seguinte métricas:
+
+
+
+
+
+![Erro na Imagem. Acesse o arquivo trajectory_odo_imu_gps.png](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/trajectory_odo_imu_gps.png)
+
+
