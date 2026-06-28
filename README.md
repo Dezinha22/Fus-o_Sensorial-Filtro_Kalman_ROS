@@ -292,6 +292,7 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
 ## Resultados
 
 Sob a ópitica dos erros, foram analisados os valores correspondentes de posição e orientação (guinada) do estimado  - pelos filtros de Kalman e seus inputs - frente ao ground truth. Dessa forma, temos: 
+
 1º) Somente Odometria: 
 
             --- Posição ---
