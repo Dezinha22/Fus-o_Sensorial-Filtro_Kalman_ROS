@@ -336,6 +336,71 @@ Sob a ópitica dos erros, foram analisados os valores correspondentes de posiç�
     Erro Máximo Yaw:       0.0199 rad
 
 
+Face aos dados apresentados, temos que os valores RMSE estão entre 2.3115 metros e 2.4908 metros. Sabendo que o valores RMSE são fruto da raiz quadrada da média dos valores dos erros, será adotada a análise comparativa do RMSE entre si em pontos percentuais. Pois, existe consideravél possibilidade de que os dados estejam influenciados por uma gravação de informações de localização sem estarem no mesmo referencial do ground truth. Ou seja, o referencial adotado para análise de qualidade dos filtros será dada pela análise utilizando os próprios valores RMSE como referência. Atribuindo o valor de RMSE do filtro de Kalman com odometria + imu + gps por ter apresentado melhor qualidade (vide o desvio padrão da posição, uma métrica que somente correlaciona os próprios dados para obter insights). 
+
+Logo:
+
+            Somente Odometria                 Odometria + IMU                Odometria + IMU + GPS
+        RMSE da Posição:  2.4908 m    RMSE Posição:          2.4089 m    RMSE Posição:          2.3115 m
+
+Considerando:
+
+    As dimensões do Husky como 990 × 670 × 390 mm (Comprimento × Largura × Altura). 
+    
+E
+    
+    Possuindo RMSE_ODOM_IMU_GPS como valor de referência para realizar a análise dedicada. Em virtude do desvio padrão dos erros da posição com a aplicação desse filtro de Kalman ser 71,2 mm. 
+    
+Afinal:
+
+    Todos convergiram para o mesmo erro final posição: 2.2935 m. Isso é um forte indício de que o ponto fim, do teste registrado na BAG, está a 2.2935 m de distância do ponto de referência do ground truth quando     se iniciou a simulação e o registro dos dados.
+    
+    Desvio padrão ODOM + IMU + GPS = 0.0712 m
+    Desvio padrão ODM + IMU =  0.5931 m
+    Desvio padrão ODM = 0.7742 m
+
+    Portanto, correlacionando o desvio padrão com o erro final da posição:
+
+    Indice de qualidade Desvio padrão ODOM + IMU + GPS = 0.0712 m / 2.2935 m -> 0.031044256
+    Desvio padrão ODM + IMU =  0.5931 m / 2.2935 m -> 0,258600
+    Desvio padrão ODM = 0.7742 m / 2.2935 m -> 0,33756771
+
+
+
+
+    
+Temos:
+
+    Erro especifico Somente ODOM = Valor de referência/valor medido
+
+    Erro específico Somente ODOM = RMSE_ODOM_IMU_GPS/RMSE_ODM
+
+    Erro específico Somente ODOM = 2.3115 m / 2.4908 m
+
+    Erro específico Somente ODOM = 0.928015096 (unidimensional)
+
+
+    Erro especifico Odometria_IMU = Valor de referência/valor medido
+
+    Erro especifico Odometria_IMU = 2.3115 m / 2.4089 m 
+
+    Erro especifico Odometria_IMU = 0.959566607 (unidimensional)
+
+E
+
+    Considerando que as métricas alcançadas na aplicação do filtro de Kalman com ODOM_IMU_GPS é a situação ótima. 
+    
+Temos que:
+
+1º) O filtro de Kalman somente com odometria apresentou a menor qualidade dentre os filtros apresentados. Apresentando um indice de qualidade 3.16% inferior ao apresentado pelo filtro de Kalman com odometria e IMU.
+
+2º) O filtro de Kalman com odom + imu + gps apresentou um indice de qualidade 0.959566
+
+
+presumirá que 
+
+
+
 
  posição final, temos: Os erros finais apresentaram taxas similares quando análisado sob óptica da posição final. A saber:
 
