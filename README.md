@@ -404,11 +404,36 @@ Com os gráficos a seguir corroborando com o entendimento supracitado. São eles
 ### Trajetórias
 
 #### Somente odometria
+![Erro na Imagem. Acesse o arquivo trajectory_odo.png](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/trajectory_odom_only.png)
 
 #### Odometria + IMU
+![Erro na Imagem. Acesse o arquivo trajectory_odo_imu.png](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/trajectory_odom%2Bimu.png)
 
 #### Odometria + IMU + GPS
-
 ![Erro na Imagem. Acesse o arquivo trajectory_odo_imu_gps.png](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/trajectory_odo_imu_gps.png)
+
+
+### Orientação
+
+#### Somente odometria
+![Erro na Imagem. Acesse o arquivo yaw no repositório](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/yaw_error_odom_only.png)
+
+#### Odometria + IMU
+![Erro na Imagem. Acesse o arquivo yaw no repositório](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/yaw_error_odom%2Bimu.png)
+
+#### Odometria + IMU + GPS
+![Erro na Imagem. Acesse o arquivo yaw no repositório](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/yaw_error_trajectory_odo_imu_gps.png)
+
+
+### Posição
+
+#### Somente odometria
+![Erro na Imagem. Acesse o arquivo position no repositório ](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/position_error_odom_only.png)
+
+#### Odometria + IMU
+![Erro na Imagem. Acesse o arquivo position no repositóriio](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/position_error_odom%2Bimu.png)
+
+#### Odometria + IMU + GPS
+![Erro na Imagem. Acesse o arquivo position no repositório](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/position_error_trajectory_odo_imu_gps.png)
 
 
