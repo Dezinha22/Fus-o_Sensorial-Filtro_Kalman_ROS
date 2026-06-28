@@ -3,7 +3,7 @@ Repositório com as etapas e os arquivos necessários para a aplicação do filt
 
 A base de dados principal é obtida a partir do input de dados provenientes do ambiente simulado do [LaR - UFBA](https://github.com/lar-deeufba/lar_gazebo) e o clearpath husky.
 
-## Configuração de Startup
+## Configuração de Start-up
 
 ### Pré-Requisitos de Sistemas
 
