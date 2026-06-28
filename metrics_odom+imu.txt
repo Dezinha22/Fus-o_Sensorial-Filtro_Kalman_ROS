@@ -1,0 +1,13 @@
+=== Métricas de Avaliação - Filtro de Kalman ===
+
+--- Posição ---
+RMSE Posição:          2.4089 m
+Erro Médio Posição:    2.3348 m
+Erro Máximo Posição:   5.3022 m
+Desvio Padrão Posição: 0.5931 m
+Erro Final Posição:    2.2935 m
+
+--- Orientação (Yaw) ---
+RMSE Orientação (Yaw): 1.2042 rad
+Erro Médio Yaw:        0.2678 rad
+Erro Máximo Yaw:       6.0776 rad
