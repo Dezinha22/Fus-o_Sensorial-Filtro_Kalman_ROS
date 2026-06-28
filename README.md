@@ -361,7 +361,7 @@ Afinal:
 
     Portanto, correlacionando o desvio padrão com o erro final da posição conseguimos obter a elucidação da amostra ótima para esse cenário. A saber :
 
-    Indice de qualidade Desvio padrão ODOM + IMU + GPS = 0.0712 m / 2.2935 m -> 0.031044256
+    Indíce de qualidade Desvio padrão ODOM + IMU + GPS = 0.0712 m / 2.2935 m -> 0.031044256
     Desvio padrão ODM + IMU =  0.5931 m / 2.2935 m -> 0,258600
     Desvio padrão ODM = 0.7742 m / 2.2935 m -> 0,33756771
 
@@ -396,23 +396,18 @@ Podemos conlcuir que:
 
 2º) O filtro de Kalman com odom + imu + gps apresentou o melhor indíce de qualidade.
 
-3º) Os dados de odometria e IMU possuiram qualidades parecidas e possivelmente o veículo não conseguiu realizar uma trajetória estável durante a simulação. Apresentando variação significativas 
+3º) Os dados de odometria e IMU possuiram qualidades parecidas e possivelmente o veículo não conseguiu realizar uma trajetória estável durante a simulação. Sendo somente alcançado um nível de qualidade interessante quando se inseriu informações provenientes de interações com elementos exteroceptivos (GPS). Ou seja, quando desmembrou os dados obtidos da estrtura física do robô.
 
-presumirá que 
-
-
+Com os gráficos a seguir corroborando com o entendimento supracitado. São eles:
 
 
- posição final, temos: Os erros finais apresentaram taxas similares quando análisado sob óptica da posição final. A saber:
+### Trajetórias
 
+#### Somente odometria
 
-Para fins de análise preliminar, serão adotadas as seguintes premissas:
+#### Odometria + IMU
 
-A) Os erros De forma geral, a aplicação dos filtros de Kalman reveleram um erro de A aplicação do filtro de Kalman com somente dados de odometria revelou uma estimativa instavél, com as seguinte métricas:
-
-
-
-
+#### Odometria + IMU + GPS
 
 ![Erro na Imagem. Acesse o arquivo trajectory_odo_imu_gps.png](https://github.com/Dezinha22/Fus-o_Sensorial-Filtro_Kalman_ROS/blob/main/trajectory_odo_imu_gps.png)
 
