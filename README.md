@@ -111,7 +111,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
         Filter, search, and stream logs from all your Compose services
         in one place with Docker Desktop's Logs view. docker-desktop://dashboard/logs?appId=lar_gazebo
 
-14 - Caso apresente a mensagem de erro *! Image l... pull access denied for lar-gazebo, repository does not exist or may require 'docker login' 31.1s*. Não se assuste, isso costuma ser decorrente do fato do repositório não ter sido localizada na busca. Esse fato não altera o sucesso do pipiline, uma vez que ele será executado com os arquivos locais (obtidos após clonar o repositório do github).
+14 - Caso apresente a mensagem de erro *! Image l... pull access denied for lar-gazebo, repository does not exist or may require 'docker login' 31.1s*. Não se assuste, isso costuma ser decorrente do fato do repositório não ter sido localizada na busca. Esse fato não altera o sucesso do pipeline, uma vez que ele será executado com os arquivos locais (obtidos após clonar o repositório do github).
 
 15 - Utilize o comando *docker compose ps* para validar a criação do ambiente. A saída deve ser similar a esposta seguir:
 
@@ -336,7 +336,7 @@ Sob a ópitica dos erros, foram analisados os valores correspondentes de posiç�
     Erro Máximo Yaw:       0.0199 rad
 
 
-Face aos dados apresentados, temos que os valores RMSE estão entre 2.3115 metros e 2.4908 metros. Sabendo que o valores RMSE são fruto da raiz quadrada da média dos valores dos erros, será adotada a análise comparativa do RMSE entre si em pontos percentuais. Pois, existe consideravél possibilidade de que os dados estejam influenciados por uma gravação de informações de localização sem estarem no mesmo referencial do ground truth. Ou seja, o referencial adotado para análise de qualidade dos filtros será dada pela análise utilizando os próprios valores RMSE e do erro final da posiçao como referência. Atribuindo, como valor de referência, o valor de RMSE do filtro de Kalman com odometria + imu + gps por ter apresentado melhor qualidade (vide o desvio padrão da posição, uma métrica que somente correlaciona os próprios dados para obter insights). 
+Face aos dados apresentados, temos que os valores RMSE estão entre 2.3115 metros e 2.4908 metros. Sabendo que o valores RMSE são fruto da raiz quadrada da média dos valores dos erros, será adotada a análise comparativa do RMSE entre si em pontos percentuais. Pois, existe considerável possibilidade de que os dados estejam influenciados, por uma gravação de informações de localização, sem estarem no mesmo referencial do ground truth. Ou seja, o referencial adotado para análise de qualidade dos filtros será dada pela análise utilizando os próprios valores RMSE e do erro final da posiçao como referência. Atribuindo, como valor de referência, o valor de RMSE do filtro de Kalman com odometria + imu + gps por ter apresentado melhor qualidade (vide o desvio padrão da posição, uma métrica que somente correlaciona os próprios dados para obter insights). 
 
 Logo:
 
@@ -377,20 +377,20 @@ Nesse sentido, temos:
 
     Erro específico Somente ODOM = 2.3115 m / 2.4908 m
 
-    Erro específico Somente ODOM = 0.928015096 (unidimensional)
+    Erro específico Somente ODOM = 0.928015096 (adimensional)
 
 
     Erro especifico Odometria_IMU = Valor de referência/valor medido
 
     Erro especifico Odometria_IMU = 2.3115 m / 2.4089 m 
 
-    Erro especifico Odometria_IMU = 0.959566607 (unidimensional)
+    Erro especifico Odometria_IMU = 0.959566607 (adimensional)
 
 E
 
     Considerando que as métricas alcançadas na aplicação do filtro de Kalman com ODOM_IMU_GPS é a situação ótima. 
     
-Podemos conlcuir que:
+Podemos concluir que:
 
 1º) O filtro de Kalman somente com odometria apresentou a menor qualidade dentre os filtros apresentados. Apresentando um indice de qualidade 3.16% inferior ao apresentado pelo filtro de Kalman com odometria e IMU.
 
@@ -398,7 +398,7 @@ Podemos conlcuir que:
 
 3º) Os dados de odometria e IMU possuiram qualidades parecidas e possivelmente o veículo não conseguiu realizar uma trajetória estável durante a simulação. Sendo somente alcançado um nível de qualidade interessante quando se inseriu informações provenientes de interações com elementos exteroceptivos (GPS). Ou seja, quando desmembrou os dados obtidos da estrtura física do robô.
 
-Com os gráficos a seguir corroborando com o entendimento supracitado. São eles:
+Com os gráficos a seguir corroborando com o entendimento supracitado. Inclusive, demostrando correções de peqenas oscilações do ground truth, tornando a representação mais suave. São eles:
 
 
 ### Trajetórias
