@@ -139,7 +139,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/Desktop/Atividade_II_Localização_Robotica$ docker cp ~/Desktop/Atividade_II_Localização_Robotica/husky_Kalmanan_fusion_backup lar_gazebo_noetic:/ws/src/husky_Kalmanan_fusion
     Successfully copied 9.98kB (transferred 21kB) to lar_gazebo_noetic:/ws/src/husky_Kalmanan_fusion
 
-20 - Agora, verifique se o arquivo efetivamente foi transferido para o container docker em execução. Para isso, utilize o comando *cd*, *pwd*, dentre outros direcionados a localização e compartilhamento de endereço de pastas/arquivos. Por exemplo, temos o comando  *cd /ws/src/husky_Kalmanan_fusion* para acessar a bag nomeada husky_Kalmanan_fusion. A saida no terminal deve ser semelhante a:
+20 - Agora, verifique se o arquivo efetivamente foi transferido para o container docker em execução. Para isso, utilize o comando *cd*, *pwd*, dentre outros direcionados a localização e compartilhamento de endereço de pastas/arquivos. Por exemplo, temos o comando  *cd /ws/src/husky_Kalmanan_fusion* para acessar o pacote ROS nomeado husky_Kalmanan_fusion. A saida no terminal deve ser semelhante a:
 
     ros@docker-desktop:/ws/src/husky_Kalmanan_fusion$ 
 
