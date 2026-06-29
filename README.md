@@ -129,7 +129,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
     ros@docker-desktop:/ws$ pwd
     /ws
 
-18 - Após esse processo, utilize o comando *ls ~/Desktop/ | grep husky* para localizar o pacote ROS extraído desse repositório. Importante, você pode ajustar as atribuições contidas no comando para otimizar a busca. Assim como, a localização do arquivo também pode ser alcançando utilizando os comandos contidos no item 7 desse tutorial. O comando deve ser executado em outra aba do terminator, executado diretamente no ambiente local e a saida deve ser algo similiar a:
+18 - Após esse processo, utilize o comando *ls ~/Desktop/ | grep husky* para localizar o pacote ROS extraído desse repositório. Importante, você pode ajustar as atribuições contidas no comando para otimizar a busca. Assim como, a localização do arquivo também pode ser obtida utilizando os comandos contidos no item 7 desse tutorial. O comando deve ser executado em outra aba do terminator, executado diretamente no ambiente local e a saida deve ser algo similiar a:
 
     (base) matheus@matheus-VivoBook-ASUSLaptop-X512FBC-X512FBC:~/lar_gazebo$ ls ~/Desktop/ | grep husky
     husky_Kalmanan_fusion
