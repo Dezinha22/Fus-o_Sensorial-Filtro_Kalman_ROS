@@ -143,7 +143,7 @@ A base de dados principal é obtida a partir do input de dados provenientes do a
 
     ros@docker-desktop:/ws/src/husky_Kalmanan_fusion$ 
 
-21 - Nesse momento, verifique os arquivos contidos na pasta copiada para confirmar que a transferência foi realizada com sucesso. Para isso, utilize o *ls* para verificar os arquivos contidos dentro da bag. A estrtura deve ser parecida com:
+21 - Nesse momento, verifique os arquivos contidos na pasta copiada para confirmar que a transferência foi realizada com sucesso. Para isso, utilize o *ls* para verificar os arquivos contidos dentro da bag. A estrutura deve ser parecida com:
 
     ros@docker-desktop:/ws/src/husky_Kalmanan_fusion$ ls
     CMakeLists.txt  config  launch  package.xml  scripts
