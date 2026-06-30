@@ -249,7 +249,7 @@ Dessa forma, se faz necessário ter diversos terminais abertos simultaneamente. 
     process[rosout-1]: started with pid [505]
     started core service [/rosout]
 
-27 - Mantenha o terminal Alpha ativo e, em um sengundo terminal, execute os mesmos passos do item 25. Esse novo terminal chamaremos de terminal Bravo.
+27 - Mantenha o terminal Alpha ativo e, em um segundo terminal, execute os mesmos passos do item 25. Esse novo terminal chamaremos de terminal Bravo.
 
 28 - No terminal Bravo iremos ativar o avaliador do filtro de Kalman, ele será responsável por coletar os dados gerados pelo pacote ROS (onde estão localizadas as diferentes versões do filtro de Kalman) e compará-lo com o referencial (graund truth). Para isso, exeute o comando *roslaunch husky_Kalmanan_fusion evaluate.launch*. A saída do comando deverá ser semelhante a:
 
